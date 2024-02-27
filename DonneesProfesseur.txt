@@ -1,0 +1,46 @@
+1
+Bolduc
+Simon-Olivier
+INF100
+INF101
+INF102
+INF200
+#
+Jeremy Ouellet
+Emeric Renaud
+Vincent Girard
+Camille Savard
+Renee Dionne
+#
+2
+Tremblay
+Thomas
+INF103
+INF100
+INF200
+#
+Mathis Simard
+Louis-Simon Fortin
+#
+3
+Bolduc
+Simon-Olivier
+INF200
+INF201
+INF202 
+#
+Jeremy Ouellet
+Emeric Renaud
+Vincent Girard
+#
+4
+Blackburn
+Jules
+INF200
+INF201
+INF202
+#
+Jeremy Ouellet
+Emeric Renaud
+Vincent Girard
+#
