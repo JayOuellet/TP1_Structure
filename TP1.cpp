@@ -1,5 +1,5 @@
-// (1) En-tête
-// Jérémy Ouellet
+// (1) En-tÃªte
+// JÃ©rÃ©my Ouellet
 // TP1 Structure de Donnees
 // 02/13/24
 // 02/26/24
@@ -55,7 +55,7 @@ public:
     DossierProfesseur() : debut(nullptr) {}
 
     ~DossierProfesseur() {
-        // Libérer la mémoire allouée pour les professeurs et leurs cours/étudiants
+        // LibÃ©rer la mÃ©moire allouÃ©e pour les professeurs et leurs cours/Ã©tudiants
         while (debut != nullptr) {
             Professeur* temp = debut;
             debut = debut->suivant;
@@ -91,7 +91,7 @@ public:
         string nom, prenom;
         string ligne;
         while (getline(fichier, ligne)) {
-            if (ligne == "#") { // Séparateur entre les professeurs
+            if (ligne == "#") { // SÃ©parateur entre les professeurs
                 continue;
             }
 
@@ -164,7 +164,7 @@ public:
                 afficherCoursPlusDemande();
                 break;
             default:
-                cout << "Opération non reconnue : " << operation << endl;
+                cout << "OpÃ©ration non reconnue : " << operation << endl;
                 break;
             }
         }
@@ -172,24 +172,24 @@ public:
         fichier.close();
     }
 
-    void supprimerProfesseur(int id) {
-        // Implémentez la suppression du professeur avec l'ID donné ici
+    void supprimerProfesseur(int id) 
+    {
         cout << "Suppression du professeur avec l'ID " << id << endl;
     }
 
-    void profilProfesseur(int id) {
-        // Implémentez l'affichage du profil du professeur avec l'ID donné ici
+    void profilProfesseur(int id) 
+    {
         cout << "Affichage du profil du professeur avec l'ID " << id << endl;
     }
 
-    void afficherProfPlusEtudiants() {
-        // Implémentez l'affichage du professeur avec le plus d'étudiants ici
-        cout << "Affichage du professeur avec le plus d'étudiants" << endl;
+    void afficherProfPlusEtudiants() 
+    {
+        cout << "Affichage du professeur avec le plus d'Ã©tudiants" << endl;
     }
 
-    void afficherCoursPlusDemande() {
-        // Implémentez l'affichage du cours le plus demandé ici
-        cout << "Affichage du cours le plus demandé" << endl;
+    void afficherCoursPlusDemande() 
+    {
+        cout << "Affichage du cours le plus demandÃ©" << endl;
     }
 };
 
