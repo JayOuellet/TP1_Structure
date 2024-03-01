@@ -20,7 +20,7 @@ public:
 	Etudiant* suivant;
 };
 
-class Professeur //Création de la liste chaîneée des professeurs comprenant leur identifiant, leur nom, prénom, cours et etudiants 
+class Professeur //Création de la liste chaîneée des professeurs comprenant leur identifiant, le nombre d'étudiant de ce probfesseur, son nom, prénom, cours et etudiants 
 {
 public:
 	int id, nbE; 
@@ -208,42 +208,42 @@ public:
 		}											
 		void afficherProfPlusEtudiants() const // Affiche les noms des professeur ayant le plus d’étudiants
 		{
-			Professeur* mostE = tete;
-			int max = 0;
-			while (mostE != nullptr)
+			Professeur* mostE = tete; //Crée une variable temporaire compatbilisant le nombre d'étudiant qui prend la valeur de la tete
+			int max = 0; //Le max s'initialise à 0
+			while (mostE != nullptr) //Si la profil mostE existe
 			{
-				int nbE=0;
-				Etudiant* courant = mostE->listeEtudiants;
-				while (courant !=nullptr)
+				int nbE=0; //alors on initialise le nombre d'étudiant à 0
+				Etudiant* courant = mostE->listeEtudiants; //Courant prend donc la valeur du premier étudiant
+				while (courant !=nullptr) //Si il y a bel et bien un nom d'étudiant
 				{
-					nbE++;
-					courant = courant->suivant;
+					nbE++; //on incrémente le nombre d'étudiant pour ce professeur
+					courant = courant->suivant; //Et on passe au prochain noeud d'étudiant
 				}
-				if (max<nbE)
+				if (max<nbE) //Si le nombre d'étudiant est plus grand que le max
 				{
-					max = nbE;
+					max = nbE; //alors ce max devient le plus grand nombre d'étudiant pour un professeur
 				}
-				mostE = mostE->suivant;
+				mostE = mostE->suivant; //On passe au profil suivant
 			}
-			mostE = tete;
-			cout << "Voici le ou les professeur aillant le plus d'eleves :" << endl;
-			while (mostE != nullptr)
+			mostE = tete; //On remet la valeur de la tete dans mostE
+			cout << "Voici le ou les professeur aillant le plus d'eleves :" << endl; //On affiche les noms des professeurs avec le plus d'élèves
+			while (mostE != nullptr) //Si mostE a un profil de professeur qui n'est pas vide
 			{
-				int nbE = 0;
-				Etudiant* courant = mostE->listeEtudiants;
-				while (courant != nullptr)
+				int nbE = 0; //alors on initialise le nombre d'étudiant à 0
+				Etudiant* courant = mostE->listeEtudiants; //Et on met la liste d'étudiants dans courant
+				while (courant != nullptr) //S'il y a un étudiant, on incrémente et on passe au prochain étudiant
 				{
 					nbE++;
 					courant = courant->suivant;
 				}
-				if (nbE == max)
+				if (nbE == max) //Si c'est un des professeurs ou le professeur avec le plus d'étudiant, alors on affiche son nom et son prénom à l'utilisateur
 				{
 				
 					cout << mostE->nom << ", " << mostE->prenom << endl;
 				}
-				mostE = mostE->suivant;
+				mostE = mostE->suivant; //On passe au prochain professeur
 			}
-			cout << "------------------------" << endl;
+			cout << "------------------------" << endl; //Mise en page
 		}								
 		void afficherCoursPlusDemande() const // affiche les cours les plus demandés de la liste
 		{
