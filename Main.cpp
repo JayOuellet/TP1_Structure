@@ -319,7 +319,7 @@ public:
 				}
 			}
 		}
-		dossier.~DossierProfesseur();
+		dossier.~DossierProfesseur(); //On supprime le dossier professeur en mémoire
 		
 		return 0; // retour à zéro
 	}
